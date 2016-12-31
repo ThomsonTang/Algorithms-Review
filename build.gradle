@@ -1,0 +1,4 @@
+configure(subprojects.findAll { it.name != 'book-notes' }) {
+    apply plugin: 'java'
+    apply plugin: 'groovy'
+}
