@@ -7,10 +7,9 @@ package com.thomson.algs4th.model;
  * @version Created ：2016-27/10/2016-15:34
  */
 public class BinarySearch {
-
     public static int rank(int[] sources, int key) {
         int low = sources[0];
-        int high = sources[sources.length -1];
+        int high = sources[sources.length - 1];
         return 0;
     }
 }
