@@ -1,0 +1,18 @@
+group = 'com.thomson.algs'
+version = '1.0.1'
+
+project(':algorithms-4th') {
+    apply plugin: 'java'
+    apply plugin: 'groovy'
+    apply plugin: 'idea'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        compile(project(":algs4"))
+        testCompile("junit:junit:4.11")
+    }
+}
