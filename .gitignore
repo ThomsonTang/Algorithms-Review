@@ -102,3 +102,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# ignore the source of algorithm4.jar
+algs4
+
