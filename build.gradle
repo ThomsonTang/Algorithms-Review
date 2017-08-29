@@ -16,3 +16,13 @@ project(':algorithms-4th') {
         testCompile("junit:junit:4.11")
     }
 }
+
+project(':ds-in-java') {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}
