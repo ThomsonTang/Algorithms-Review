@@ -60,4 +60,38 @@ public class IntSinglyLinkedList {
         }
         return element;
     }
+
+    public void printAll() {
+        for (IntNode node = head; node != null; node = node.next) {
+            System.out.println(node.info);
+        }
+    }
+
+    public boolean contains(int element) {
+        IntNode node;
+        for (node = head; node != null && node.info == element; node = node.next) ;
+        return node != null;
+    }
+
+    public void delete(int element) {
+        if (!isEmpty()) {
+            if (head == tail && head.info == element) { // 只有一个节点
+                head = null;
+                tail = null;
+            } else if (element == head.info) { // 刚好是头节点
+                head = head.next;
+            } else {
+                IntNode prev;
+                IntNode node;
+                for (prev = head, node = head.next; node != null && node.info != element; prev = prev.next, node = node.next)
+                    ;
+                if (node != null) {
+                    prev.next = node.next;
+                    if (node == tail) {
+                        tail = prev;
+                    }
+                }
+            }
+        }
+    }
 }
