@@ -2,3 +2,5 @@ rootProject.name = "Algorithms-Review"
 include "algorithms-4th"
 include "algs4"
 include "ds-in-java"
+include 'problem-practice'
+
