@@ -83,4 +83,25 @@ public class LruLinkedHashMap<K, V> extends LinkedHashMap<K, V> {
             lock.unlock();
         }
     }
+
+    public static void main(String[] args) {
+        LruLinkedHashMap<String, String> map = new LruLinkedHashMap<>(5);
+        map.put("001", "我是001号");
+        map.put("002", "我是002号");
+        map.put("003", "我是003号");
+        map.put("004", "我是004号");
+        map.put("005", "我是005号");
+
+        for (int i = 0; i < 4; i++) {
+            String key = "00" + (i + 2);
+            System.out.println(map.get(key));
+        }
+
+        System.out.println("====================");
+
+        map.put("006", "我是006号");
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            System.out.println(entry.getValue());
+        }
+    }
 }
