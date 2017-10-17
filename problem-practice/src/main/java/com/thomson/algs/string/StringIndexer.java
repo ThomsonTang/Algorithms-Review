@@ -1,4 +1,4 @@
-package com.thomson.algs.problem;
+package com.thomson.algs.string;
 
 /**
  * 实现类似于{@code java.lang.String#indexof()}的功能
