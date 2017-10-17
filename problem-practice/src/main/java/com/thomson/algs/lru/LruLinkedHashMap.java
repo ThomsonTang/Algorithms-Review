@@ -8,7 +8,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * 类说明
+ * 基于{@link LinkedHashMap} 实现LRU算法
  *
  * @author Thomson Tang
  */
