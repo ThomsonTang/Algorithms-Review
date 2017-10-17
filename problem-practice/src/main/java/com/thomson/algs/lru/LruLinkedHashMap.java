@@ -1,5 +1,7 @@
 package com.thomson.algs.lru;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.locks.Lock;
@@ -36,10 +38,47 @@ public class LruLinkedHashMap<K, V> extends LinkedHashMap<K, V> {
     }
 
     @Override
+    public V get(Object key) {
+        try {
+            lock.lock();
+            return super.get(key);
+        } finally {
+            lock.unlock();
+        }
+    }
+
+    @Override
     public V put(K key, V value) {
         try {
             lock.lock();
             return super.put(key, value);
+        } finally {
+            lock.unlock();
+        }
+    }
+
+    public int size() {
+        try {
+            lock.lock();
+            return super.size();
+        } finally {
+            lock.unlock();
+        }
+    }
+
+    public void clear() {
+        try {
+            lock.lock();
+            super.clear();
+        } finally {
+            lock.unlock();
+        }
+    }
+
+    public Collection<Map.Entry<K, V>> getAll() {
+        try {
+            lock.lock();
+            return new ArrayList<>(super.entrySet());
         } finally {
             lock.unlock();
         }
