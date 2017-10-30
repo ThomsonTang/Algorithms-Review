@@ -57,6 +57,7 @@ public class LruLinkedHashMap<K, V> extends LinkedHashMap<K, V> {
         }
     }
 
+    @Override
     public int size() {
         try {
             lock.lock();
@@ -66,6 +67,7 @@ public class LruLinkedHashMap<K, V> extends LinkedHashMap<K, V> {
         }
     }
 
+    @Override
     public void clear() {
         try {
             lock.lock();
