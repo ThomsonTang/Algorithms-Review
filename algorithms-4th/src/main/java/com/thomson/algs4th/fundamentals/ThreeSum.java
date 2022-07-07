@@ -7,7 +7,9 @@ package com.thomson.algs4th.fundamentals;
  * @version Created: 09/03/2017.
  */
 public class ThreeSum {
-    //count triples that sum to 0.
+    /**
+     * count triples that sum to 0.
+     */
     public static int count(int[] sources) {
         int size = sources.length;
         int count = 0;
